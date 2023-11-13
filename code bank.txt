@@ -1,0 +1,17 @@
+python -m venv venv; venv\Scripts\activate; python -m pip install -q --upgrade pip; python -m pip install -qr requirements.txt (run venv straight up)
+ 
+
+Installing particular version of python on a verstual environment
+1. check the default python version  use    "python --version"
+2. check python versions on system   use     "py -0"
+
+To change defalt python version
+- search for environment variables
+- click on environment variables
+- go to system variables and click on path then click edit
+- look for the python version you want and move it to the first position
+
+for example make sue these 3 paths for your python version are at the top in this order
+C:\Users\HP\AppData\Local\Programs\Python\Python39\Scripts\
+C:\Users\HP\AppData\Local\Programs\Python\Python39\
+C:\Users\HP\AppData\Roaming\Python\Python39\Scripts
