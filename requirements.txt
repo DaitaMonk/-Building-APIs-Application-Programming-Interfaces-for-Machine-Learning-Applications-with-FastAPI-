@@ -1,3 +1,7 @@
 pytest
 scikit-learn
 fastapi[all]
+pandas
+matplotlib
+plotly
+seaborn

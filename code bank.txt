@@ -15,3 +15,5 @@ for example make sue these 3 paths for your python version are at the top in thi
 C:\Users\HP\AppData\Local\Programs\Python\Python39\Scripts\
 C:\Users\HP\AppData\Local\Programs\Python\Python39\
 C:\Users\HP\AppData\Roaming\Python\Python39\Scripts
+
+print file tree "tree /F > tree_output.txt" windows
