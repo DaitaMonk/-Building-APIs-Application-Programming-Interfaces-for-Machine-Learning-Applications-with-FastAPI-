@@ -11,9 +11,18 @@ To change defalt python version
 - go to system variables and click on path then click edit
 - look for the python version you want and move it to the first position
 
-for example make sue these 3 paths for your python version are at the top in this order
+for example make use these 3 paths for your python version are at the top in this order
 C:\Users\HP\AppData\Local\Programs\Python\Python39\Scripts\
 C:\Users\HP\AppData\Local\Programs\Python\Python39\
 C:\Users\HP\AppData\Roaming\Python\Python39\Scripts
 
 print file tree "tree /F > tree_output.txt" windows
+run api ------ python src/main.py
+create image --------------- docker build . -t  Sepsis_api:latest
+create container ------------- docker run -p 8000:800
+create image tag -------------- docker tag sepsis_api:latest  daitamonk/sepsis_api
+to push to docker hub---------- docker push daitamonk/sepsis_api
+to check images---------------- docker images
+
+
+to install environment variable --------------- pip install virtualenv (make sure no antivirus is blocking its installation)
