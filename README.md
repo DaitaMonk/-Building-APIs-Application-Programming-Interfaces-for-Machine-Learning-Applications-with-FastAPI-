@@ -1,144 +1,49 @@
-# Machine Learning API using FastAPI
-Develop a Machine Learning API (Application Programming Interface) using FastAPI.
-
-[![python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
-[![MIT licensed](https://img.shields.io/badge/license-mit-blue?style=for-the-badge&logo=appveyor)](./LICENSE)
-![Python](https://img.shields.io/badge/python-3.9-blue.svg)
+<h1 align="center">
+  <Strong>Sepsis Analysis and Prediction Using FastAPI</strong>
+</h1>
 
 ## Introduction
 
-This is the last project of the program, congratulations for all the work done until now.
+**APIs** work by sharing data between applications, systems, and devices. This happens through a request and response cycle. A user initiates a request for data by interacting with an application. The request is sent to the API, which retrieves the data and returns it to the user. [Postman](https://www.postman.com/what-is-an-api/)
 
-In this project, we aim to help you to discover how to create an API that might be requested to interact with a ML model. This is an interesting solution when you want to keep your model architecture secret or to make your model available to users already having an API. By creating an API, and deploying it, your model can so that receive request using the internet protocol as presented by the illustration below.
+**FastAPI** is a modern, fast (high-performance), web framework for building APIs with Python 3.8+ based on standard Python type hints.[FastAPI](https://fastapi.tiangolo.com/)
 
-![API illustration](https://lh3.googleusercontent.com/-qVJ4ZsbjsmH6CnYbojsAR4ImyHV8yxsFVinunH-pX7VCapGvufcXiPak6YVKIrj9ZdiCHwK5UFtQW8yuU5t83pz6fbqN1F2p74OWuT5dObCPnTBuCYr_P1mUg8arbP0WuEt7j_A)
+The key features are:
 
-**Source** : *The benefits of Machine Learning APIs - UbiOps*
+***Fast:*** Very high performance, on par with NodeJS and Go (thanks to Starlette and Pydantic). One of the fastest Python frameworks available.
 
+***Fast to code:*** Increase the speed to develop features by about 200% to 300%. *
 
-## Description
+***Fewer bugs:*** Reduce about 40% of human (developer) induced errors. *
 
-<!-- 
-[FastAPI](https://fastapi.tiangolo.com/) # 
--->
+***Intuitive:*** Great editor support. Completion everywhere. Less time debugging.
 
-You will have a minimal API demo with [FastAPI](https://fastapi.tiangolo.com/), this will just serve you to make sure that everything works correctly. Then, you will have to make your own API, this allowing you to interact with a Machine Learning model, that is to say:
-- Pass data through a request;
-- Get the data in using the API;
-- Apply the necessary processing;
-- Submit the processed data to the ML model to make the predictions;
-- Process the predictions obtained and return them as the API's response ot the input request.
+***Easy:*** Designed to be easy to use and learn. Less time reading docs.
 
-## Instructions
+***Short:*** Minimize code duplication. Multiple features from each parameter declaration. Fewer bugs.
 
-Your task is to build an API integrating a ML model using FastAPI.
-Clone this repository to use it as a template, do not forget to change the readme at the end of the project.
-Your work should follow these next steps.
+***Robust:*** Get production-ready code. With automatic interactive documentation.
 
-1.  Build a ML model to predict the [Sepsis](https://www.kaggle.com/datasets/chaunguynnghunh/sepsis?select=README.md), during the 2 first weeks. 
+***Standards-based:*** Based on (and fully compatible with) the open standards for APIs: OpenAPI (previously known as Swagger) and JSON Schema.
 
-2.  Build an API using Fast API, during the remaining weeks, to embed the ML model built.
+Sepsis, characterized by a dysregulated immune response to infection, stands as a critical global health challenge, claiming countless lives annually. Its rapid progression and often elusive symptoms make early detection and intervention paramount. This introduction prepares us to carefully look into the dataset, forming the basis for the project goals. By closely examining the details of sepsis using data analysis, I aim to add to what I know, helping to create better and more focused ways to recognize and handle sepsis early. 
 
+## Objective
 
-Upon completion of your project, you are required to write a blog post
-on your thought process on medium, LinkedIn, personal blog, or any other
-suitable blogging site.
+This project aims to develop a predictive model for sepsis, utilizing advanced data analysis techniques to forecast the likelihood of an individual developing sepsis based on key indicators from available datasets. The significance of this predictive model lies in its potential to facilitate early detection, thereby improving patient outcomes, reducing mortality rates, and optimizing the allocation of medical resources and create an API that will requested to interact with a ML model.
 
-## Rubrics
+This endeavor addresses the needs of various stakeholders, including healthcare providers who can benefit from improved early detection for prompt treatment, patients who may experience better outcomes with timely interventions, healthcare institutions that can optimize resource utilization, and researchers contributing to the growing body of knowledge in sepsis prediction. Additionally, public health organizations stand to gain insights for developing targeted strategies, potentially reducing the overall burden of sepsis on healthcare systems. 
 
-Machine Learning :
+APIs enable different software systems to communicate and interact with each other seamlessly. This promotes interoperability between applications, allowing them to work together and share data in a standardized manner.
 
--   **Excellent:** Have a pipeline/function that takes inputs and make accurate predictions.
+APIs allow developers to create modular systems by breaking down complex applications into smaller, independent components. This modularity enhances scalability, as individual components can be updated or replaced without affecting the entire system.
 
--   **Good:** Have a pipeline/function that takes inputs and make predictions.
+## Summary
 
--   **Fair:** Have a pipeline/function that takes inputs but faces bugs while doing predictions.
-
-API :
-
--   **Excellent:** Have an API that works correctly, taking inputs multiple inputs and returning all the related predictions.
-
--   **Good:** Have an API that launches, makes predictions and returns results.
-
--   **Fair:** Have an API that launches but having bugs regarding inputs handling or returning predictions.
-
-## Setup
-
-Install the required packages to be able to run the evaluation locally.
-
-You need to have [`Python 3`](https://www.python.org/) on your system (**a Python version lower than 3.10**). Then you can clone this repo and being at the repo's `root :: repository_name> ...`  follow the steps below:
-
-- Windows:
-        
-        python -m venv venv; venv\Scripts\activate; python -m pip install -q --upgrade pip; python -m pip install -qr requirements.txt  
-
-- Linux & MacOs:
-        
-        python3 -m venv venv; source venv/bin/activate; python -m pip install -q --upgrade pip; python -m pip install -qr requirements.txt  
-
-The both long command-lines have a same structure, they pipe multiple commands using the symbol ` ; ` but you may manually execute them one after another.
-
-1. **Create the Python's virtual environment** that isolates the required libraries of the project to avoid conflicts;
-2. **Activate the Python's virtual environment** so that the Python kernel & libraries will be those of the isolated environment;
-3. **Upgrade Pip, the installed libraries/packages manager** to have the up-to-date version that will work correctly;
-4. **Install the required libraries/packages** listed in the `requirements.txt` file so that it will be allow to import them into the python's scripts and notebooks without any issue.
-
-**NB:** For MacOs users, please install `Xcode` if you have an issue.
-
-## Run FastAPI
-
-- Run the demo apps (being at the repository root):
-        
-  FastAPI:
-    
-    - Demo
-
-          uvicorn src.demo_01.api:app --reload 
-
-    <!-- - Salary prediction
-
-          uvicorn src.salary.api:app --reload  -->
-
-
-  - Go to your browser at the following address, to explore the api's documentation :
-        
-      http://127.0.0.1:8000/docs
-
-
-<!-- ## Screenshots
-
-<table>
-    <tr>
-        <th>FastAPI</th>
-        <th>FastAPI</th>
-    </tr>
-    <tr>
-        <td><img src="./screenshots/.png"/></td>
-        <td><img src="./screenshots/.png"/></td>
-    </tr>
-</table> -->
-
-
-## Resources
-Here are some ressources you would read to have a good understanding of FastAPI :
-- [Tutorial - User Guide](https://fastapi.tiangolo.com/tutorial/)
-- [Video - Building a Machine Learning API in 15 Minutes ](https://youtu.be/C82lT9cWQiA)
-- [FastAPI for Machine Learning: Live coding an ML web application](https://www.youtube.com/watch?v=_BZGtifh_gw)
-- [Video - Deploy ML models with FastAPI, Docker, and Heroku ](https://www.youtube.com/watch?v=h5wLuVDr0oc)
-- [FastAPI Tutorial Series](https://www.youtube.com/watch?v=tKL6wEqbyNs&list=PLShTCj6cbon9gK9AbDSxZbas1F6b6C_Mx)
-- [Http status codes](https://www.linkedin.com/feed/update/urn:li:activity:7017027658400063488?utm_source=share&utm_medium=member_desktop)
-
-
-
-
-
-## Contributing
-
-Feel free to make a PR or report an issue 😃.
-
-Oh, one more thing, please do not forget to put a description when you make your PR 🙂.
+| Code | Name                                         |                                           Published Article                                           | Deployed App |
+| ---- | -------------------------------------------- | :---------------------------------------------------------------------------------------------------: | -----------: |
+| LP3  | [Article]() | [Article](https://vinal-sepsis-api.hf.space/docs) |              |
 
 ## Author
 
-- [Emmanuel KOUPOH](https://www.linkedin.com/in/esa%C3%AFe-alain-emmanuel-dina-koupoh-7b974a17a/)
-[![My Twitter Link](https://img.shields.io/twitter/follow/emmanuelkoupoh?style=social)](https://twitter.com/emmanuelkoupoh)
+- [Alvin Momoh](https://github.com/DaitaMonk)
