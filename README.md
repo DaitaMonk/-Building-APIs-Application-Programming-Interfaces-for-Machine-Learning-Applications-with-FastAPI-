@@ -42,7 +42,7 @@ APIs allow developers to create modular systems by breaking down complex applica
 
 | Code | Name                                         |                                           Published Article                                           | Deployed App |
 | ---- | -------------------------------------------- | :---------------------------------------------------------------------------------------------------: | -----------: |
-| LP3  | [Article]() | [Article](https://vinal-sepsis-api.hf.space/docs) |              |
+| LP6  |Sepsis API| [Article]() |[App](https://vinal-sepsis-api.hf.space/docs)              |
 
 ## Author
 
